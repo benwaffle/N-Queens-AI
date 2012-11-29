@@ -3,7 +3,7 @@
 #include <time.h>
 #define SIZE 8
 
-int answers[SIZE] = {1,3,0,3};
+int answers[SIZE] = {};
 //answers[row] = column;
 int count = 0;
 
@@ -51,6 +51,7 @@ void hillClimbing(int array[]){
     int weight = getWeight(array);
     if (weight == 0){
         printArray(array);
+        printf("count: %i\n",count);
         exit(0);
     } else {
         int nextrow[] = {-1};
@@ -70,7 +71,7 @@ void hillClimbing(int array[]){
                             nextrow[i] = (int)NULL;
                             nextcol[i] = (int)NULL;
                         }
-                        nextrow[0] = queen; 
+                        nextrow[0] = queen;
                         nextrow[1] = -1;                //end of array char
                         nextcol[0] = validcol;
                         nextcol[1] = -1;
@@ -101,14 +102,13 @@ void hillClimbing(int array[]){
             }
         } else {
             //local max
-            printf("local max reached. sidestepping\n");
+            //            printf("local max reached. sidestepping\n");
         }
     }
 }
 
 int main(int argc, const char * argv[]){
     srandom((unsigned int)time(NULL));  //seed random
-    
     int i;
     for(i=0;i<SIZE;i++){                //generate random board
         answers[i] = getRand(SIZE);
@@ -116,6 +116,5 @@ int main(int argc, const char * argv[]){
     printf("running hill climbing with array: ");
     printArray(answers);
     hillClimbing(answers);
-    printf("count: %i",count);
     return 0;
 }
