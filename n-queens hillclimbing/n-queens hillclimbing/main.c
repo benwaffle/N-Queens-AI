@@ -50,6 +50,7 @@ int getWeight(int array[]){
 void hillClimbing(int array[]){
     int weight = getWeight(array);
     if (weight == 0){
+        printf("\n\nsolution: ");
         printArray(array);
         printf("count: %i\n",count);
         exit(0);
@@ -101,8 +102,11 @@ void hillClimbing(int array[]){
                 count--;                                    //decrease the count
             }
         } else {
-            //local max
-            //            printf("local max reached. sidestepping\n");
+            printf("local max reached. retrying\n");
+            int i;
+            for(i=0;i<SIZE;i++) answers[i] = getRand(SIZE);
+            printArray(answers);
+            hillClimbing(answers);
         }
     }
 }
@@ -110,9 +114,7 @@ void hillClimbing(int array[]){
 int main(int argc, const char * argv[]){
     srandom((unsigned int)time(NULL));  //seed random
     int i;
-    for(i=0;i<SIZE;i++){                //generate random board
-        answers[i] = getRand(SIZE);
-    }
+    for(i=0;i<SIZE;i++) answers[i] = getRand(SIZE);
     printf("running hill climbing with array: ");
     printArray(answers);
     hillClimbing(answers);
