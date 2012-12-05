@@ -43,7 +43,7 @@ int getWeight(int array[]){
 void geneticAlgorithm(){
     int population[POP][SIZE];
     int children[POP][SIZE];
-    int weightProb[] = {};
+    int weightProb[224] = {};
     int wpl = 0; //weightProb[] length
     float mutProb = 0.05;
     int done = 0;
