@@ -45,7 +45,7 @@ void geneticAlgorithm(){
     int children[POP][SIZE];
     int weightProb[224] = {};
     int wpl = 0; //weightProb[] length
-    float mutProb = 0.05;
+    float mutProb = 0.2; //higher prob yields faster times. works decently anyways. bug: prob = 0
     int done = 0;
     int i;
     for(i=0;i<POP;i++) for(int j=0;j<SIZE;j++) population[i][j] = getRand(SIZE);
