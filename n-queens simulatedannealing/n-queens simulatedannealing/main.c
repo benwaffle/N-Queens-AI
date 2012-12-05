@@ -7,12 +7,11 @@
 //
 
 #include <stdio.h>
+#define e 2.718281828459045 //double
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    printf("Hello, World!\n");
+    
     return 0;
 }
 
