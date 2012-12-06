@@ -8,7 +8,7 @@ Hill climbing - done
 
 stochastic beam search - todo
 
-simulated annealing - todo
+simulated annealing - done
 
 genetic algorithm - done
 
