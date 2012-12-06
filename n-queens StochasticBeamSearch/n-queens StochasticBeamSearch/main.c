@@ -84,9 +84,8 @@ void stochBeamSearch(){
         int n = getRand(wpl);
         //          state k             row             col
         answers[weightProb[0][n]][weightProb[1][n]] = weightProb[2][n];
-        printf("recursing\n");
-        stochBeamSearch();
     }
+    stochBeamSearch();
 }
 
 int main(int argc, const char * argv[]){
