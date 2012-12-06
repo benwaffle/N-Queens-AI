@@ -6,7 +6,7 @@ Bruteforce - done
 
 Hill climbing - done
 
-stochastic beam search - todo
+stochastic beam search - done
 
 simulated annealing - done
 
