@@ -11,5 +11,3 @@ stochastic beam search - done
 simulated annealing - done
 
 genetic algorithm - done
-
--Ben Iofel
